@@ -1,0 +1,16 @@
+[formatter.nix]
+command = "nixpkgs-fmt"
+includes = ["*.nix"]
+excludes = ["build/*"]
+
+[formatter.clang]
+command = "clang-format"
+options = ["-i"]
+includes = ["*.cpp"]
+excludes = ["build/*"]
+
+[formatter.cmake]
+command = "cmake-format"
+options = ["-i"]
+includes = ["**/CMakeLists.txt"]
+excludes = ["build/*"]
